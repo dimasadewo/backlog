@@ -1,0 +1,9 @@
+before_script:
+  - docker info
+
+build_and_deploy_to_56:
+  tags:
+    - kinerja_56
+  script:
+     - docker build . -t rust-kinerja-service:v0.0.1
+     - docker-compose up -d --scale kinerja-service=5

@@ -1,0 +1,27 @@
+[package]
+name = "rust-kinerja-service"
+version = "0.1.0"
+authors = ["dimasadewo <dimasawewo@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "3"
+actix-rt = "1.1.1"
+actix-service = "1.0.6"
+actix-cors = "0.5.4"
+env_logger = "0.8.2"
+qstring = "0.7.2"
+diesel = { version = "1.4.4", features = ["mysql", "r2d2", "64-column-tables", "chrono"]}
+dotenv = "0.15.0"
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"]}
+bytes = "0.5"
+chrono_locale = "0.1.1"
+futures = "0.3.4"
+r2d2 = "0.8"
+rand = "0.7"
+serde_json = "1.0"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+tokio-core = "0.1.17"

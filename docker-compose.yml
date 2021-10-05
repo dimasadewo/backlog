@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  kinerja-service:
+    image: rust-kinerja-service:v0.0.1
+    restart: always
+    labels:
+      - "traefik.http.routers.kinerja-service.rule=Host(`kinerja.docker.localhost`)"
